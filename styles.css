@@ -3,19 +3,59 @@
     --bg-primary: #2A324B;
     --text-primary: #F4F4F4;
     --text-secondary: #D1D1D1;
-    --accent-gold: #B48A64;
     --bg-section: #3D486B;
     --font-heading: 'Cormorant Garamond', serif;
     --font-body: 'Inter', sans-serif;
 }
 
 /* Reset and Base Styles */
-* {
+/* Language Selector */
+.language-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 5px;
+    background: #3D486B;
+    padding: 5px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.language-btn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.language-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    color: white;
+}
+
+.language-btn.active {
+    background: var(--accent-gold);
+    color: black;
+    font-weight: 500;
+    border-color: var(--accent-gold);
+    pointer-events: none;
+    cursor: default;
+}
+
+/* Base Styles */
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
