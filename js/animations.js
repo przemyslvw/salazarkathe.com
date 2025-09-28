@@ -6,16 +6,20 @@ export function initAnimations() {
         if (!manifestoText) return;
         
         const text = manifestoText.textContent;
-        const words = text.split(' ');
+        // Split into words but keep the original text structure
+        const words = text.match(/\S+\s*/g) || [];
         
         // Clear the text
         manifestoText.textContent = '';
         
-        // Add each word with animation
+        // Add each word with animation, preserving original spacing
         words.forEach((word, index) => {
             const span = document.createElement('span');
             span.className = 'word';
-            span.textContent = word + ' ';
+            span.style.whiteSpace = 'nowrap';
+            span.style.display = 'inline-block';
+            span.style.padding = '0 4px';
+            span.textContent = word;
             span.style.animationDelay = `${index * 0.05}s`;
             manifestoText.appendChild(span);
         });

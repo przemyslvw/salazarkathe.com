@@ -63,10 +63,18 @@ html {
 body {
     font-family: var(--font-body);
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 1.8;
     color: var(--text-primary);
     background-color: var(--bg-primary);
     overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    word-spacing: normal;
+    letter-spacing: 0.01em;
 }
 
 /* Typography */
@@ -270,6 +278,33 @@ section {
 #about, #biography {
     background-color: var(--bg-section);
     text-align: center;
+    padding: 4rem 0;
+}
+
+#biography {
+    background-color: var(--bg-primary);
+}
+
+#biography .content-text {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    font-size: 1.1rem;
+    text-align: left;
+    padding: 0 2rem;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+#biography p {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    hyphens: none;
+    word-spacing: normal;
+    white-space: normal;
 }
 
 .content-text {
@@ -306,16 +341,14 @@ section {
     width: 100%;
     padding: 12px 16px;
     border: 2px solid var(--bg-section);
-    border-radius: 6px;
-    background-color: var(--bg-section);
-    color: var(--text-primary);
     font-family: var(--font-body);
     font-size: 1rem;
     transition: border-color 0.3s ease;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+/* About Section */
+#about {
+    padding: 8rem 0;
     outline: none;
     border-color: var(--accent-gold);
 }
