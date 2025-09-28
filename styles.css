@@ -104,7 +104,6 @@ p {
 
 /* Container */
 .container {
-    max-width: 1100px;
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -116,13 +115,16 @@ section {
 
 /* Hero Section */
 #hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
     text-align: center;
+    z-index: 1;
+    margin: 0;
 }
 
 #particles-canvas {
@@ -135,6 +137,7 @@ section {
 }
 
 .hero-content {
+    margin-top: -150px;
     position: relative;
     z-index: 2;
 }
