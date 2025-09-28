@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // List of images in the gallery directory
     const galleryImages = [
         'gallery/2025-09-09_15-54.png',
-        'gallery/2025-09-28_15-55.png'
+        'gallery/2025-09-28_15-55.png',
+        'gallery/2025-09-28_16-51.png'
     ];
 
     // Clear existing static content
