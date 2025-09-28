@@ -1,11 +1,15 @@
   /* CSS Variables for consistent theming */
   :root {
-    --bg-primary: #2A324B;
+    --bg-primary: #1a1f2e;
     --text-primary: #F4F4F4;
     --text-secondary: #D1D1D1;
-    --bg-section: #3D486B;
+    --bg-section: #2A324B;
     --font-heading: 'Cormorant Garamond', serif;
     --font-body: 'Inter', sans-serif;
+    --accent-1: #FF6B6B;
+    --accent-2: #4ECDC4;
+    --accent-3: #FFD166;
+    --accent-4: #A05EB5;
 }
 
 /* Reset and Base Styles */
@@ -87,6 +91,18 @@ h1, h2 {
 h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
     text-align: center;
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-2), var(--accent-3), var(--accent-4));
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 8s ease infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 h2 {
@@ -125,6 +141,7 @@ section {
     text-align: center;
     z-index: 1;
     margin: 0;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
 }
 
 #particles-canvas {
@@ -143,10 +160,29 @@ section {
 }
 
 .tagline {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--text-secondary);
     font-weight: 300;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    position: relative;
+    display: inline-block;
+}
+
+.tagline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-4));
+    animation: expand 2s ease-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes expand {
+    to { width: 100%; }
 }
 
 .scroll-arrow {
