@@ -21,12 +21,12 @@
     z-index: 1000;
     display: flex;
     gap: 5px;
-    background: rgba(61, 72, 107, 0.8);
+    /* background: var(--bg-section); */
     padding: 6px 8px;
     border-radius: 25px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
     transition: all 0.3s ease;
 }
 
@@ -56,12 +56,10 @@
 }
 
 .language-btn.active {
-    background: linear-gradient(135deg, var(--accent-1), var(--accent-3));
-    color: #fff;
-    font-weight: 500;
-    border-color: transparent;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-    pointer-events: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive adjustments */
