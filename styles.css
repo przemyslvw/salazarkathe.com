@@ -213,13 +213,17 @@ section {
     background-color: #000000;
     padding: 80px 0;
     text-align: center;
+    overflow: hidden;
 }
 
 .artist-image {
-    max-width: 600px;
+    max-width: 100%;
+    width: 600px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    display: block;
 }
 
 /* About and Biography Sections */
@@ -436,5 +440,17 @@ section {
 
     .manifesto-text {
         font-size: 1.1rem;
+    }
+    
+    /* Artist Portrait Mobile Styles */
+    #artist-portrait {
+        padding: 40px 0;
+    }
+    
+    .artist-image {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
     }
 }
