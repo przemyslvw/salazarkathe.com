@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const galleryImages = [
         'gallery/2025-09-09_15-54.png',
         'gallery/2025-09-28_15-55.png',
-        'gallery/2025-09-28_16-51.png'
+        'gallery/2025-09-28_16-51.png',
+        'gallery/2025-09-28 at 16.49.30.jpg',
+        'gallery/Cuadro foto original.jpg',
+        'gallery/2025-09-28 at 16.49.30.jpg',
     ];
 
     // Clear existing static content
