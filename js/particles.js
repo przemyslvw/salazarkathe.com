@@ -25,7 +25,7 @@ export class ParticleSystem {
                 y: Math.random() * this.canvas.height,
                 vx: (Math.random() - 0.5) * 0.5,
                 vy: (Math.random() - 0.5) * 0.5,
-                radius: Math.random() * 2 + 1,
+                radius: Math.random() * 8 + 1,
                 opacity: Math.random() * 0.5 + 0.2
             });
         }
