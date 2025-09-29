@@ -43,10 +43,24 @@ export class ParticleSystem {
             if (particle.x < 0 || particle.x > this.canvas.width) particle.vx *= -1;
             if (particle.y < 0 || particle.y > this.canvas.height) particle.vy *= -1;
             
-            // Draw particle
+            // Draw particle with burning effect
+            const gradient = this.ctx.createRadialGradient(
+                particle.x, particle.y, 0,
+                particle.x, particle.y, particle.radius * 3
+            );
+            gradient.addColorStop(0, `rgba(255, 200, 50, ${particle.opacity})`);
+            gradient.addColorStop(0.5, `rgba(255, 100, 0, ${particle.opacity * 0.7})`);
+            gradient.addColorStop(1, `rgba(180, 50, 0, 0)`);
+            
+            this.ctx.beginPath();
+            this.ctx.arc(particle.x, particle.y, particle.radius * 3, 0, Math.PI * 2);
+            this.ctx.fillStyle = gradient;
+            this.ctx.fill();
+            
+            // Draw inner bright core
             this.ctx.beginPath();
             this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-            this.ctx.fillStyle = `rgba(180, 138, 100, ${particle.opacity})`;
+            this.ctx.fillStyle = `rgba(255, 220, 100, ${particle.opacity + 0.2})`;
             this.ctx.fill();
         });
         
