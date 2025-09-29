@@ -351,8 +351,6 @@ section {
     max-width: 100%;
     width: 600px;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     margin: 0 auto;
     display: block;
 }
