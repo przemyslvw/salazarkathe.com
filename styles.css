@@ -339,10 +339,12 @@ section {
 
 /* Artist Portrait Section */
 #artist-portrait {
-    background-color: #070705;
-    padding: 80px 0;
+    background: linear-gradient(90deg, #070705 30%, #0b0a0e 100%);
+    padding: 0;
     text-align: center;
     overflow: hidden;
+    position: relative;
+    z-index: -1;
 }
 
 .artist-image {
@@ -631,30 +633,7 @@ section {
     .manifesto-text {
         font-size: 1.1rem;
     }
-    
-    /* Footer Styles */
-    .site-footer {
-        background-color: var(--bg-primary);
-        color: var(--text-secondary);
-        text-align: center;
-        padding: 20px 0;
-        font-size: 0.8rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        margin-top: 40px;
-    }
-    
-    .footer-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-    
-    .site-footer p {
-        margin: 0;
-        text-align: center !important;
-        line-height: 1.5;
-    }
-    
+
     /* Artist Portrait Mobile Styles */
     #artist-portrait {
         padding: 40px 0;
@@ -666,4 +645,34 @@ section {
         padding: 0 15px;
         box-sizing: border-box;
     }
+}
+
+/* Footer Styles */
+.site-footer {
+    position: relative;
+    width: 100%;
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.site-footer p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1.5;
+    width: 100%;
 }
