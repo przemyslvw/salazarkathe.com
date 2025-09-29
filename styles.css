@@ -181,9 +181,11 @@ section {
     align-items: center;
     position: relative;
     text-align: center;
-    z-index: 2;
+    z-index: -1;
     margin: 0;
-    background: transparent;
+    /* background: transparent; */
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+
 }
 
 .hero-content {
@@ -628,6 +630,29 @@ section {
 
     .manifesto-text {
         font-size: 1.1rem;
+    }
+    
+    /* Footer Styles */
+    .site-footer {
+        background-color: var(--bg-primary);
+        color: var(--text-secondary);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 0.8rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 40px;
+    }
+    
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .site-footer p {
+        margin: 0;
+        text-align: center !important;
+        line-height: 1.5;
     }
     
     /* Artist Portrait Mobile Styles */
