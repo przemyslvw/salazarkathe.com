@@ -152,19 +152,15 @@ section {
     padding: 80px 0;
 }
 
-/* Hero Section */
-#hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    z-index: 1;
-    margin: 0;
-    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+/* Fixed Animation Background */
+#animation-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
 }
 
 #particles-canvas {
@@ -174,6 +170,20 @@ section {
     width: 100%;
     height: 100%;
     z-index: 1;
+}
+
+/* Hero Section */
+#hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    margin: 0;
+    background: transparent;
 }
 
 .hero-content {
