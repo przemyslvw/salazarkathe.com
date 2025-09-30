@@ -336,6 +336,8 @@ section {
 /* Gallery Section */
 #gallery {
     background-color: var(--bg-primary);
+    position: relative;
+    z-index: 2;
 }
 
 .gallery-grid {
