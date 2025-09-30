@@ -415,7 +415,7 @@ section {
 
 /* Artist Portrait Section */
 #artist-portrait {
-    background: linear-gradient(90deg, #070705 30%, #0b0a0e 100%);
+    background: #010101;
     padding: 0;
     text-align: center;
     overflow: hidden;
