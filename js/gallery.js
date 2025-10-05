@@ -1,17 +1,49 @@
-// Function to load gallery images dynamically
-document.addEventListener('DOMContentLoaded', function() {
-    const galleryGrid = document.querySelector('.gallery-grid');
+// Function to create gallery items
+function createGalleryItem(imagePath, title = '') {
+    const fileName = imagePath.split('/').pop().split('.')[0];
+    const itemTitle = title || fileName.replace(/_/g, ' ').replace(/-/g, ' ');
     
-    // List of images in the gallery directory
-    const galleryImages = [
-        'gallery/2025-09-09_15-54.png',
-        'gallery/2025-09-28_15-55.png',
-        'gallery/2025-09-28_16-51.png',
-        'gallery/2025-09-28 at 16.49.30.jpg',
-        'gallery/Cuadro foto original.jpg',
+    const galleryItem = document.createElement('div');
+    galleryItem.className = 'gallery-item fade-up';
+    galleryItem.dataset.title = itemTitle;
+    galleryItem.dataset.description = 'Contemporary Caribbean Ritualistic Art';
+    galleryItem.dataset.image = imagePath;
+    
+    galleryItem.innerHTML = `
+        <img src="${imagePath}" alt="${itemTitle}" loading="lazy">
+        <div class="gallery-overlay">
+            <div class="overlay-text">${itemTitle}</div>
+        </div>
+    `;
+    
+    return galleryItem;
+}
+
+// Function to load a gallery
+function loadGallery(container, images) {
+    if (!container) return;
+    
+    // Clear loading text
+    container.innerHTML = '';
+    
+    // Add each image to the gallery
+    images.forEach((imagePath) => {
+        const galleryItem = createGalleryItem(imagePath);
+        container.appendChild(galleryItem);
+    });
+    
+    // Re-initialize lightbox if needed
+    if (typeof initLightbox === 'function') {
+        initLightbox();
+    }
+}
+
+// Main function to initialize all galleries
+document.addEventListener('DOMContentLoaded', function() {
+    // List of images for the first gallery
+    const gallery1Images = [
         // Akwarele collection
         'gallery/akwarele/70n2x970n2x970n2.png',
-        'gallery/akwarele/Image_1himu01himu01him.png',
         'gallery/akwarele/Image_1tewa51tewa51tew.png',
         'gallery/akwarele/Image_7062q67062q67062.png',
         'gallery/akwarele/Image_sxrf2sexrf2sexr.png',
@@ -21,36 +53,22 @@ document.addEventListener('DOMContentLoaded', function() {
         'gallery/akwarele/qv9ap3qv9ap3qv9a.png',
         'gallery/akwarele/tjdoyotjdoyotjdo.png',
         'gallery/akwarele/ve1x4jve1x4jve1x.png',
-        'gallery/akwarele/w6kl73w6kl73w6kl.png',
-        'gallery/akwarele/y0ewupy0ewupy0ew.png'
     ];
 
-    // Clear existing static content
-    galleryGrid.innerHTML = '';
+    // List of images for the second gallery
+    const gallery2Images = [
+        'gallery/2025-09-09_15-54.png',
+        'gallery/2025-09-28_15-55.png',
+        'gallery/2025-09-28_16-51.png',
+        'gallery/2025-09-28 at 16.49.30.jpg',
+        'gallery/Cuadro foto original.jpg',
+    ];
 
-    // Add each image to the gallery
-    galleryImages.forEach((imagePath, index) => {
-        const fileName = imagePath.split('/').pop().split('.')[0];
-        const title = fileName.replace(/_/g, ' ').replace(/-/g, ' ');
-        
-        const galleryItem = document.createElement('div');
-        galleryItem.className = 'gallery-item fade-up';
-        galleryItem.dataset.title = title;
-        galleryItem.dataset.description = 'Contemporary Caribbean Ritualistic Art';
-        galleryItem.dataset.image = imagePath;
-        
-        galleryItem.innerHTML = `
-            <img src="${imagePath}" alt="${title}" loading="lazy">
-            <div class="gallery-overlay">
-                <div class="overlay-text">${title}</div>
-            </div>
-        `;
-        
-        galleryGrid.appendChild(galleryItem);
-    });
-
-    // Initialize lightbox after loading images
-    if (typeof initLightbox === 'function') {
-        initLightbox();
-    }
+    // Load first gallery
+    const gallery1 = document.querySelector('#gallery .gallery-grid');
+    loadGallery(gallery1, gallery1Images);
+    
+    // Load second gallery
+    const gallery2 = document.querySelector('#gallery2 .gallery-grid-2');
+    loadGallery(gallery2, gallery2Images);
 });
