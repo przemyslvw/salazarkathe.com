@@ -2,6 +2,9 @@
 
 A sophisticated, single-file HTML portfolio website for contemporary Caribbean artist Katerine Salazar Villamil, featuring the "Digital Sanctuary" theme with elegant animations and modern responsive design.
 
+## Localhost
+python3 -m http.server 8000
+
 ## 🎨 Project Overview
 
 This website showcases the work of Katerine Salazar Villamil, a contemporary artist from El Carmen de Bolívar, Colombia, who focuses on the exploration and representation of ritualistic, aesthetic, and mystical concepts native to the Caribbean region.
