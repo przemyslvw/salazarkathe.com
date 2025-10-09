@@ -1,165 +1,200 @@
 <!DOCTYPE html>
-
 <html lang="pl">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Lucho Bermúdez: Maestro Karaibskiego Rytmu</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Lora:wght@400;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
-<style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            font-family: 'Montserrat', sans-serif;
-        }
-        .slide-container {
-            margin: 0;
-            padding: 0;
-            width: 100vw;
-            height: 100vh;
-            position: relative;
-            background-color: #1E3A8A;
-            color: white;
-            overflow: hidden;
-        }
-        .bg-pattern {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.15;
-            z-index: 0;
-        }
-        .content {
-            position: relative;
-            z-index: 2;
-            height: 100%;
-            padding: 40px;
-        }
-        .title {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #FFD700;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        }
-        .subtitle {
-            font-size: 24px;
-            font-weight: 600;
-            margin-top: 15px;
-            margin-bottom: 10px;
-            color: #FF9E2C;
-        }
-        .text-content {
-            font-size: 18px;
-            font-family: 'Lora', serif;
-            line-height: 1.6;
-        }
-        .musician-container {
-            border: 4px solid #FFD700;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-        .musician-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .language-label {
-            font-size: 14px;
-            color: #FFD700;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .decoration-element {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            background-color: #009c3b;
-            clip-path: polygon(0 100%, 100% 100%, 100% 40%, 0 100%);
-            opacity: 0.8;
-            z-index: 1;
-        }
-        .content-section {
-            margin-bottom: 15px;
-        }
-        .music-note {
-            font-size: 24px;
-            color: #FFD700;
-            margin-right: 5px;
-        }
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Lucho Bermúdez: Maestro Karaibskiego Rytmu</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Lora:wght@400;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .slide-container {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        background-color: #1e3a8a;
+        color: white;
+        overflow: hidden;
+      }
+      .bg-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.15;
+        z-index: 0;
+      }
+      .content {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        padding: 40px;
+      }
+      .title {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #ffd700;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+      .subtitle {
+        font-size: 24px;
+        font-weight: 600;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        color: #ff9e2c;
+      }
+      .text-content {
+        font-size: 18px;
+        font-family: 'Lora', serif;
+        line-height: 1.6;
+      }
+      .musician-container {
+        border: 4px solid #ffd700;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+      .musician-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .language-label {
+        font-size: 14px;
+        color: #ffd700;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      .decoration-element {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background-color: #009c3b;
+        clip-path: polygon(0 100%, 100% 100%, 100% 40%, 0 100%);
+        opacity: 0.8;
+        z-index: 1;
+      }
+      .content-section {
+        margin-bottom: 15px;
+      }
+      .music-note {
+        font-size: 24px;
+        color: #ffd700;
+        margin-right: 5px;
+      }
     </style>
-</head>
-<body>
-<div class="slide-container">
-<!-- Background Pattern -->
-<div class="bg-pattern">
-<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
-<pattern height="50" id="pattern" patternunits="userSpaceOnUse" width="50">
-<path d="M25,0 L50,25 L25,50 L0,25 Z" fill="none" opacity="0.5" stroke="white" stroke-width="1"></path>
-</pattern>
-<rect fill="url(#pattern)" height="100%" width="100%"></rect>
-</svg>
-</div>
-<!-- Bottom Decoration -->
-<div class="decoration-element"></div>
-<!-- Main Content -->
-<div class="content flex flex-row">
-<!-- Left Column - Text Content -->
-<div class="w-7/12 pr-8 flex flex-col">
-<div class="title flex justify-between items-center">
-<div>Lucho Bermúdez: Maestro Karaibskiego Rytmu</div>
-<div class="text-sm">El Maestro del Ritmo Caribeño</div>
-</div>
-<!-- Biography Section -->
-<div class="content-section">
-<div class="subtitle flex justify-between items-center">
-<div><i class="fas fa-music music-note"></i>Geniusz z Bolívar</div>
-<div class="text-sm">El Genio de Bolívar</div>
-</div>
-<div class="language-label">Polski (PL)</div>
-<div class="text-content mb-2">
-                Urodzony w El Carmen de Bolívar, uważany za jednego z najważniejszych muzyków Kolumbii i Ojca nowoczesnej Cumbii i Porro. Jego kompozycje wzbogaciły kolumbijskie dziedzictwo muzyczne i rozprzestrzeniły rytmy karaibskie na całym świecie.
+  </head>
+  <body>
+    <div class="slide-container">
+      <!-- Background Pattern -->
+      <div class="bg-pattern">
+        <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+          <pattern
+            height="50"
+            id="pattern"
+            patternunits="userSpaceOnUse"
+            width="50"
+          >
+            <path
+              d="M25,0 L50,25 L25,50 L0,25 Z"
+              fill="none"
+              opacity="0.5"
+              stroke="white"
+              stroke-width="1"
+            ></path>
+          </pattern>
+          <rect fill="url(#pattern)" height="100%" width="100%"></rect>
+        </svg>
+      </div>
+      <!-- Bottom Decoration -->
+      <div class="decoration-element"></div>
+      <!-- Main Content -->
+      <div class="content flex flex-row">
+        <!-- Left Column - Text Content -->
+        <div class="w-7/12 flex flex-col pr-8">
+          <div class="title flex items-center justify-between">
+            <div>Festival de las Bolas de Candela</div>
+            <div class="text-sm">El Maestro del Ritmo Caribeño</div>
+          </div>
+          <!-- Biography Section -->
+          <div class="content-section">
+            <div class="subtitle flex items-center justify-between"></div>
+            <div class="text-content mb-2">
+              El festival de la Candela es una celebración cultural en El Carmen
+              de Bolívar, Colombia, en honor a la patrona, la Virgen del Carmen.
+              La festividad es una mezcla de tradiciones católicas e influencias
+              indígenas, africanas y criollas.
             </div>
-<div class="language-label">Español (ES)</div>
-<div class="text-content">
-                Nacido en El Carmen de Bolívar, es considerado uno de los músicos más importantes de Colombia y el Padre de la Cumbia y el Porro modernos. Sus composiciones enriquecieron el patrimonio musical colombiano y difundieron los ritmos caribeños por todo el mundo.
+            <div class="language-label">Polski (PL)</div>
+            <div class="text-content mb-2"></div>
+            <div class="language-label">Español (ES)</div>
+            <div class="text-content">
+              La Manda La "manda" es un voto o promesa hecha a la santa, que
+              implica actos de automortificación. Los devotos demuestran su
+              devoción mediante rituales y sacrificios, como cargar a la santa
+              sobre sus hombros, llevar velas en la cabeza y dejar que la cera
+              caliente gotee sobre su piel.
             </div>
-</div>
-<!-- Legacy Section -->
-<div class="content-section">
-<div class="subtitle flex justify-between items-center">
-<div><i class="fas fa-crown music-note"></i>Dziedzictwo</div>
-<div class="text-sm">Legado</div>
-</div>
-<div class="language-label">Polski (PL)</div>
-<div class="text-content mb-2">
-                Wprowadził tradycyjne rytmy karaibskie do formatu orkiestrowego, co przyniosło kolumbijskiej muzyce międzynarodową sławę i uznanie, wpływając na całą Amerykę Łacińską. Jego kompozycje takie jak "Carmen de Bolívar" i "Colombia Tierra Querida" stały się narodowymi skarbami.
+          </div>
+          <!-- Legacy Section -->
+          <div class="content-section">
+            <div class="subtitle flex items-center justify-between">
+              <div><i class="fas fa-crown music-note"></i>Dziedzictwo</div>
+              <div class="text-sm">El Festival</div>
             </div>
-<div class="language-label">Español (ES)</div>
-<div class="text-content">
-                Llevó los ritmos caribeños tradicionales al formato orquestal, lo que catapultó la música colombiana a la fama internacional, influenciando toda América Latina. Composiciones como "Carmen de Bolívar" y "Colombia Tierra Querida" se convirtieron en tesoros nacionales.
+            <div class="language-label">Polski (PL)</div>
+            <div class="text-content mb-2"></div>
+            <div class="language-label">Español (ES)</div>
+            <div class="text-content">
+              Durante el festival, hombres y mujeres se reúnen para tocar música
+              y bailar frente a la iglesia. Algunos participantes gatean de
+              rodillas hasta que sus ropas se rasgan y su piel sangra, como forma
+              de pago a la santa.
             </div>
-</div>
-</div>
-<!-- Right Column - Musician Image -->
-<div class="w-5/12 flex flex-col justify-center">
-<div class="musician-container h-96">
-<img alt="Lucho Bermúdez - kolumbijski muzyk i kompozytor" class="musician-image" src="https://page.gensparksite.com/slides_images/71bf5e2fc7c2ae2e9ab4ee3b08fddd53.jpg"/>
-</div>
-<div class="text-center mt-4 text-sm text-gray-300">
-<div>Lucho Bermúdez z instrumentem, pionier nowoczesnej muzyki kolumbijskiej</div>
-<div>Lucho Bermúdez con su instrumento, pionero de la música colombiana moderna</div>
-</div>
-</div>
-</div>
-</div>
-</body>
+          </div>
+        </div>
+        <!-- Right Column - Musician Image -->
+        <div class="flex w-5/12 flex-col justify-center">
+          <div class="musician-container h-96">
+            <img
+              alt="Lucho Bermúdez - kolumbijski muzyk i kompozytor"
+              class="musician-image"
+              src="https://page.gensparksite.com/slides_images/71bf5e2fc7c2ae2e9ab4ee3b08fddd53.jpg"
+            />
+          </div>
+          <div class="mt-4 text-center text-sm text-gray-300">
+            <div>
+              Lucho Bermúdez z instrumentem, pionier nowoczesnej muzyki
+              kolumbijskiej
+            </div>
+            <div>
+              Lucho Bermúdez con su instrumento, pionero de la música colombiana
+              moderna
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
