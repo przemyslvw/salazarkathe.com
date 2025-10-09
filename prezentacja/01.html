@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="light" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>El Carmen de Bolívar: Kontekst geograficzny i historyczny</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Lora:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-color: #1E3A8A;
+            color: white;
+            overflow: hidden;
+        }
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            padding: 40px;
+        }
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #FFD700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .subtitle {
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            color: #FF9E2C;
+        }
+        .text-content {
+            font-size: 18px;
+            font-family: 'Lora', serif;
+            line-height: 1.6;
+        }
+        .map-container {
+            border: 4px solid #FFD700;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .map-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .language-label {
+            font-size: 14px;
+            color: #FFD700;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .decoration-element {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background-color: #009c3b;
+            clip-path: polygon(0 100%, 100% 100%, 100% 40%, 0 100%);
+            opacity: 0.8;
+            z-index: 1;
+        }
+        .content-section {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body style="">
+<div class="slide-container">
+<!-- Background Pattern -->
+<div class="bg-pattern">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<pattern height="50" id="pattern" patternUnits="userSpaceOnUse" width="50">
+<path d="M25,0 L50,25 L25,50 L0,25 Z" fill="none" opacity="0.5" stroke="white" stroke-width="1"></path>
+</pattern>
+<rect fill="url(#pattern)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<!-- Bottom Decoration -->
+<div class="decoration-element"></div>
+<!-- Main Content -->
+<div class="content flex flex-row">
+<!-- Left Column - Text Content -->
+<div class="w-7/12 pr-8 flex flex-col">
+<div class="title flex justify-between items-center">
+<div>Sercem Montes de María</div>
+<div class="text-sm">El Corazón de los Montes de María</div>
+</div>
+<!-- Geography Section -->
+<div class="content-section">
+<div class="subtitle flex justify-between items-center">
+<div>Geografia</div>
+<div class="text-sm">Geografía</div>
+</div>
+<div class="language-label">Polski (PL)</div>
+<div class="text-content mb-2">
+                Miasto położone w paśmie wzgórz Montes de María w departamencie Bolívar. Region znany z urodzajności i znaczenia strategicznego jako węzeł komunikacyjny.
+            </div>
+<div class="language-label">Español (ES)</div>
+<div class="text-content">
+                Ciudad ubicada en la serranía de los Montes de María en el departamento de Bolívar. Región conocida por su fertilidad y relevancia estratégica como modo de comunicación.
+            </div>
+</div>
+<!-- History Section -->
+<div class="content-section">
+<div class="subtitle flex justify-between items-center">
+<div>Historia</div>
+<div class="text-sm">Historia</div>
+</div>
+<div class="language-label">Polski (PL)</div>
+<div class="text-content mb-2">
+                Uważane za „Stolicę Logistyczną" subregionu. Ośrodek bogatej historii prekolumbijskiej i ważny centrum oporu kulturowego i społecznego w regionie Karaibów.
+            </div>
+<div class="language-label">Español (ES)</div>
+<div class="text-content">
+                Considerada la "Capital de la Subregión". Un núcleo de rica historia precolombina y un importante centro de resistencia cultural y social en la región Caribe.
+            </div>
+</div>
+</div>
+<!-- Right Column - Map -->
+<div class="w-5/12 flex flex-col justify-center">
+<div class="map-container h-96">
+<img alt="Mapa Kolumbii z regionem Bolívar" class="map-image" src="https://page.gensparksite.com/slides_images/0f283bebb5eacb250b9fd756eb9b13e3.png" data-height-listener-added="true">
+</div>
+<div class="text-center mt-4 text-sm text-gray-300">
+<div>El Carmen de Bolívar, Departament Bolívar, Kolumbia</div>
+<div>El Carmen de Bolívar, Departamento de Bolívar, Colombia</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

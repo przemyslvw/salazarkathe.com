@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>El Carmen de Bolívar: Podsumowanie i pytania</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Lora:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+        background-color: #1E3A8A;
+        color: white;
+        overflow: hidden;
+    }
+    .bg-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.15;
+        z-index: 0;
+    }
+    .content {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        padding: 40px;
+    }
+    .title {
+        font-size: 38px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #FFD700;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    .subtitle {
+        font-size: 24px;
+        font-weight: 600;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        color: #FF9E2C;
+    }
+    .text-content {
+        font-size: 20px;
+        font-family: 'Lora', serif;
+        line-height: 1.6;
+    }
+    .language-label {
+        font-size: 14px;
+        color: #FFD700;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .decoration-element {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background-color: #009c3b;
+        clip-path: polygon(0 100%, 100% 100%, 100% 40%, 0 100%);
+        opacity: 0.8;
+        z-index: 1;
+    }
+    .conclusion-box {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-left: 4px solid #FFD700;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+    .thanks-section {
+        background-color: rgba(255, 215, 0, 0.15);
+        border-radius: 10px;
+        padding: 15px 30px;
+        text-align: center;
+        margin-top: 30px;
+    }
+</style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Pattern -->
+<div class="bg-pattern">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<pattern height="50" id="pattern" patternunits="userSpaceOnUse" width="50">
+<path d="M25,0 L50,25 L25,50 L0,25 Z" fill="none" opacity="0.5" stroke="white" stroke-width="1"></path>
+</pattern>
+<rect fill="url(#pattern)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<!-- Bottom Decoration -->
+<div class="decoration-element"></div>
+<!-- Main Content -->
+<div class="content flex flex-col">
+<div class="title flex justify-between items-center">
+<div>Podsumowanie: Magia Trwa</div>
+<div class="text-sm">Conclusión: La Magia Perdura</div>
+</div>
+<!-- Main Conclusion -->
+<div class="flex flex-col space-y-6 mt-8">
+<div class="conclusion-box">
+<div class="language-label">Polski (PL)</div>
+<div class="text-content mb-2">
+    Kluczowy Wniosek: El Carmen de Bolívar to żywa skarbnica, w której historia, legenda i rytm tworzą niepowtarzalną, fascynującą i wciąż ewoluującą kulturę.
+</div>
+<div class="language-label">Español (ES)</div>
+<div class="text-content">
+    Conclusión Clave: El Carmen de Bolívar es un tesoro vivo donde la historia, la leyenda y el ritmo crean una cultura única, fascinante y en constante evolución.
+</div>
+</div>
+<!-- Cultural Significance -->
+<div class="conclusion-box">
+<div class="text-content mb-2">
+<i class="fas fa-star text-yellow-400 mr-2"></i> Karaibskie legendy i muzyka stanowią filar tożsamości kulturowej regionu
+</div>
+<div class="text-content">
+<i class="fas fa-star text-yellow-400 mr-2"></i> Las leyendas y la música caribeñas son pilares de la identidad cultural de la región
+</div>
+</div>
+<!-- Final Thoughts -->
+<div class="conclusion-box">
+<div class="text-content mb-2">
+<i class="fas fa-lightbulb text-yellow-400 mr-2"></i> Zachowanie tego dziedzictwa jest kluczowe dla przyszłych pokoleń
+</div>
+<div class="text-content">
+<i class="fas fa-lightbulb text-yellow-400 mr-2"></i> Preservar este patrimonio es crucial para las generaciones futuras
+</div>
+</div>
+</div>
+<!-- Thank You Section -->
+<div class="thanks-section mt-auto">
+<div class="subtitle mb-2">Podziękowanie / Agradecimiento</div>
+<div class="flex items-center justify-center">
+<i class="fas fa-heart text-red-500 text-2xl mr-3"></i>
+<div class="text-content text-center">
+    Dziękuję za uwagę! Pytania? / ¡Gracias por su atención! ¿Preguntas?
+</div>
+<i class="fas fa-heart text-red-500 text-2xl ml-3"></i>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
