@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="navigation.js" defer></script>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 <title>El Carmen de Bolívar: Wprowadzenie do Legend Karaibskich</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Lora:wght@400;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
@@ -16,18 +16,19 @@
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            overflow-x: hidden;
             font-family: 'Montserrat', sans-serif;
+            -webkit-text-size-adjust: 100%;
         }
         .slide-container {
             margin: 0;
             padding: 0;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            min-height: 100vh;
             position: relative;
             background-color: #1E3A8A;
             color: white;
-            overflow: hidden;
+            overflow-y: auto;
         }
         .bg-pattern {
             position: absolute;
@@ -41,34 +42,76 @@
         .content {
             position: relative;
             z-index: 2;
-            height: 100%;
-            padding: 40px;
+            min-height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        @media (min-width: 768px) {
+            .content {
+                padding: 40px;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+            }
         }
         .title {
-            font-size: 36px;
+            font-size: 28px;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: #FFD700;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
+        
+        @media (min-width: 768px) {
+            .title {
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+        }
         .subtitle {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 600;
             margin-top: 15px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: #FF9E2C;
         }
+        
+        @media (min-width: 768px) {
+            .subtitle {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+        }
         .text-content {
-            font-size: 20px;
+            font-size: 16px;
             font-family: 'Lora', serif;
             line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        @media (min-width: 768px) {
+            .text-content {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
         }
         .illustration-container {
             border: 4px solid #FFD700;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            min-height: 47rem;
+            height: 300px;
+            width: 100%;
+            margin: 15px 0;
+        }
+        
+        @media (min-width: 768px) {
+            .illustration-container {
+                min-height: 47rem;
+                margin: 0;
+                width: auto;
+            }
         }
         .illustration-image {
             width: 100%;
@@ -76,10 +119,17 @@
             object-fit: cover;
         }
         .language-label {
-            font-size: 14px;
+            font-size: 12px;
             color: #FFD700;
-            margin-bottom: 5px;
+            margin: 10px 0 3px;
             font-weight: bold;
+        }
+        
+        @media (min-width: 768px) {
+            .language-label {
+                font-size: 14px;
+                margin: 0 0 5px;
+            }
         }
         .decoration-element {
             position: absolute;
@@ -97,11 +147,19 @@
         }
         .icon-wrapper {
             position: absolute;
-            bottom: 30px;
-            right: 30px;
-            font-size: 64px;
+            bottom: 20px;
+            right: 20px;
+            font-size: 48px;
             color: rgba(255, 215, 0, 0.3);
             z-index: 1;
+        }
+        
+        @media (min-width: 768px) {
+            .icon-wrapper {
+                bottom: 30px;
+                right: 30px;
+                font-size: 64px;
+            }
         }
     </style>
 </head>
@@ -123,9 +181,9 @@
 <i class="fas fa-book-open"></i>
 </div>
 <!-- Main Content -->
-<div class="content flex flex-row">
+<div class="content">
 <!-- Left Column - Text Content -->
-<div class="w-7/12 pr-8 flex flex-col">
+<div class="flex flex-col w-full md:w-7/12 md:pr-8">
 <div class="title flex justify-between items-center">
 <div>Kultura Ustna i Magia Północy</div>
 <div class="text-sm">Tradición Oral y Magia del Norte</div>
@@ -162,7 +220,7 @@
 </div>
 </div>
 <!-- Right Column - Illustration -->
-<div class="w-5/12 flex flex-col justify-center">
+<div class="flex flex-col justify-center w-full mt-6 md:mt-0 md:w-5/12">
 <div class="illustration-container h-96">
 <img alt="Symboliczne przedstawienie tradycji ustnej Karaibów" class="illustration-image" src="https://page.gensparksite.com/slides_images/76b26ff0ac65f5ab775b90006fe76e80.jpg"/>
 </div>
