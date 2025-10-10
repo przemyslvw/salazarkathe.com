@@ -18,16 +18,19 @@
         padding: 0;
         overflow: hidden;
         font-family: 'Montserrat', sans-serif;
+        width: 100%;
+        height: 100%;
     }
     .slide-container {
-            margin: 0;
-            padding: 0;
-        width: 100vw;
-        height: 100vh;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
         position: relative;
         background-color: #1E3A8A;
         color: white;
-        overflow: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
     .bg-pattern {
         position: absolute;
@@ -41,18 +44,17 @@
     .content {
         position: relative;
         z-index: 2;
-        min-height: 100%;
+        min-height: 100vh;
         padding: 20px;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
     
     @media (min-width: 768px) {
         .content {
             padding: 40px;
-            height: 100%;
-            flex-direction: row;
         }
     }
     .title {
@@ -109,7 +111,7 @@
         }
     }
     .decoration-element {
-        position: absolute;
+        position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
@@ -129,12 +131,15 @@
         background-color: rgba(0, 0, 0, 0.2);
         border-left: 4px solid #FFD700;
         padding: 15px 20px;
-        margin-bottom: 20px;
+        margin: 10px 0 20px;
         border-radius: 5px;
+        width: 100%;
     }
     .thanks-section {
         background-color: rgba(255, 215, 0, 0.15);
         border-radius: 10px;
+        width: 100%;
+        margin: 10px 0;
         padding: 15px 30px;
         text-align: center;
         margin-top: 30px;
@@ -149,25 +154,25 @@
 <pattern height="50" id="pattern" patternunits="userSpaceOnUse" width="50">
 <path d="M25,0 L50,25 L25,50 L0,25 Z" fill="none" opacity="0.5" stroke="white" stroke-width="1"></path>
 </pattern>
-<rect fill="url(#pattern)" height="100%" width="100%"></rect>
 </svg>
 </div>
 <!-- Bottom Decoration -->
 <div class="decoration-element"></div>
 <!-- Main Content -->
 <div class="content flex flex-col">
-<div class="title flex justify-between items-center">
+<!-- Text Content -->
+<div class="w-full flex flex-col justify-center">
 <div>Podsumowanie: Magia Trwa</div>
 <div class="text-sm">Conclusión: La Magia Perdura</div>
 </div>
-<!-- Main Conclusion -->
-<div class="flex flex-col space-y-6 mt-8">
+<!-- Image Section -->
+<div class="w-full flex flex-col justify-center mt-8">
 <div class="conclusion-box">
 <div class="language-label">Polski (PL)</div>
 <div class="text-content mb-2">
     Kluczowy Wniosek: El Carmen de Bolívar to żywa skarbnica, w której historia, legenda i rytm tworzą niepowtarzalną, fascynującą i wciąż ewoluującą kulturę.
 </div>
-<div class="language-label">Español (ES)</div>
+{{ ... }}
 <div class="text-content">
     Conclusión Clave: El Carmen de Bolívar es un tesoro vivo donde la historia, la leyenda y el ritmo crean una cultura única, fascinante y en constante evolución.
 </div>
