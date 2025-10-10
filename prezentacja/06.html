@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="pl" data-theme="light" style=""><head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="navigation.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="navigation.js" defer></script>
 <meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Rytm i Smaki: Festiwale Regionu</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Lora:wght@400;600&amp;display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -14,18 +12,19 @@
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            overflow-x: hidden;
             font-family: 'Montserrat', sans-serif;
+            -webkit-text-size-adjust: 100%;
         }
         .slide-container {
             margin: 0;
             padding: 0;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            min-height: 100vh;
             position: relative;
             background-color: #1E3A8A;
             color: white;
-            overflow: hidden;
+            overflow-y: auto;
         }
         .bg-pattern {
             position: absolute;
@@ -39,50 +38,90 @@
         .content {
             position: relative;
             z-index: 2;
-            height: 100%;
-            padding: 40px;
+            min-height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        @media (min-width: 768px) {
+            .content {
+                padding: 40px;
+                height: 100%;
+                flex-direction: row;
+            }
         }
         .title {
-            font-size: 36px;
+            font-size: 28px;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: #FFD700;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
+        
+        @media (min-width: 768px) {
+            .title {
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+        }
         .subtitle {
-            font-size: 24px;
+            font-size: 18px;
             font-weight: 600;
-            margin-top: 15px;
-            margin-bottom: 10px;
+            margin: 10px 0 5px;
             color: #FF9E2C;
         }
+        
+        @media (min-width: 768px) {
+            .subtitle {
+                font-size: 24px;
+                margin: 15px 0 10px;
+            }
+        }
         .text-content {
-            font-size: 20px;
+            font-size: 16px;
             font-family: 'Lora', serif;
             line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        @media (min-width: 768px) {
+            .text-content {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
         }
         .image-container {
             border: 4px solid #FFD700;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            margin-bottom: 15px;
-        }
-        .festival-image {
+            margin: 15px 0;
             width: 100%;
+            max-width: 100%;
             height: 200px;
-            object-fit: cover;
         }
-        .food-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+        
+        @media (min-width: 768px) {
+            .image-container {
+                height: 300px;
+                margin: 0 0 20px 0;
+                max-width: 100%;
+            }
         }
         .language-label {
-            font-size: 14px;
+            font-size: 12px;
             color: #FFD700;
-            margin-bottom: 5px;
+            margin: 10px 0 3px;
             font-weight: bold;
+        }
+        
+        @media (min-width: 768px) {
+            .language-label {
+                font-size: 14px;
+                margin: 0 0 5px;
+            }
         }
         .decoration-element {
             position: absolute;
@@ -96,7 +135,14 @@
             z-index: 1;
         }
         .content-section {
-            margin-bottom: 15px;
+            margin-bottom: 25px;
+            width: 100%;
+        }
+        
+        @media (min-width: 768px) {
+            .content-section {
+                margin-bottom: 30px;
+            }
         }
     </style>
 </head>
@@ -114,9 +160,9 @@
 <!-- Bottom Decoration -->
 <div class="decoration-element"></div>
 <!-- Main Content -->
-<div class="content flex flex-row">
+<div class="content">
 <!-- Left Column - Text Content -->
-<div class="w-7/12 pr-8 flex flex-col">
+<div class="w-full md:w-7/12 md:pr-8 flex flex-col">
 <div class="title flex justify-between items-center">
 <div>Rytm i Smaki: Festiwale Regionu</div>
 <div class="text-sm">Ritmo y Sabor: Fiestas de la Región</div>
@@ -152,7 +198,7 @@
 </div>
 </div>
 <!-- Right Column - Images -->
-<div class="w-5/12 flex flex-col justify-center">
+<div class="w-full md:w-5/12 flex flex-col justify-center mt-8 md:mt-0">
 <!-- Festival Image -->
 <div class="image-container">
 <img alt="Tancerze Cumbii podczas festiwalu" class="festival-image" src="https://page.gensparksite.com/slides_images/1bc5b48b6500a75eb864a3f700670a95.jpg" data-height-listener-added="true">
