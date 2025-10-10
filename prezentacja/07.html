@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="navigation.js" defer></script>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
     <title>Lucho Bermúdez: Maestro Karaibskiego Rytmu</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Lora:wght@400;600&amp;display=swap"
@@ -24,18 +24,19 @@
       body {
         margin: 0;
         padding: 0;
-        overflow: hidden;
+        overflow-x: hidden;
         font-family: 'Montserrat', sans-serif;
+        -webkit-text-size-adjust: 100%;
       }
       .slide-container {
         margin: 0;
         padding: 0;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        min-height: 100vh;
         position: relative;
         background-color: #1e3a8a;
         color: white;
-        overflow: hidden;
+        overflow-y: auto;
       }
       .bg-pattern {
         position: absolute;
@@ -49,33 +50,73 @@
       .content {
         position: relative;
         z-index: 2;
-        height: 100%;
-        padding: 40px;
+        min-height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      
+      @media (min-width: 768px) {
+        .content {
+          padding: 40px;
+          height: 100%;
+        }
       }
       .title {
-        font-size: 36px;
+        font-size: 28px;
         font-weight: bold;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         color: #ffd700;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
       }
+      
+      @media (min-width: 768px) {
+        .title {
+          font-size: 36px;
+          margin-bottom: 20px;
+        }
+      }
       .subtitle {
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 600;
-        margin-top: 15px;
-        margin-bottom: 10px;
+        margin: 10px 0 5px;
         color: #ff9e2c;
       }
+      
+      @media (min-width: 768px) {
+        .subtitle {
+          font-size: 24px;
+          margin: 15px 0 10px;
+        }
+      }
       .text-content {
-        font-size: 18px;
+        font-size: 16px;
         font-family: 'Lora', serif;
         line-height: 1.6;
+        margin-bottom: 15px;
+      }
+      
+      @media (min-width: 768px) {
+        .text-content {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
       }
       .musician-container {
         border: 4px solid #ffd700;
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        margin: 15px 0;
+        width: 100%;
+        height: 300px;
+      }
+      
+      @media (min-width: 768px) {
+        .musician-container {
+          height: 400px;
+          margin: 0;
+          width: auto;
+        }
       }
       .musician-image {
         width: 100%;
@@ -83,10 +124,17 @@
         object-fit: cover;
       }
       .language-label {
-        font-size: 14px;
+        font-size: 12px;
         color: #ffd700;
-        margin-bottom: 5px;
+        margin: 10px 0 3px;
         font-weight: bold;
+      }
+      
+      @media (min-width: 768px) {
+        .language-label {
+          font-size: 14px;
+          margin: 0 0 5px;
+        }
       }
       .decoration-element {
         position: absolute;
@@ -100,7 +148,13 @@
         z-index: 1;
       }
       .content-section {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+      }
+      
+      @media (min-width: 768px) {
+        .content-section {
+          margin-bottom: 25px;
+        }
       }
       .music-note {
         font-size: 24px;
@@ -134,9 +188,9 @@
       <!-- Bottom Decoration -->
       <div class="decoration-element"></div>
       <!-- Main Content -->
-      <div class="content flex flex-row">
+      <div class="content flex flex-col md:flex-row">
         <!-- Left Column - Text Content -->
-        <div class="w-9/12 flex flex-col pr-8">
+        <div class="w-full md:w-9/12 flex flex-col md:pr-8">
           <div class="title flex items-center justify-between">
             <div>Festival de las Bolas de Candela</div>
             <div class="text-sm">El Maestro del Ritmo Caribeño</div>
@@ -193,7 +247,7 @@
 
         </div>
         <!-- Right Column - Musician Image -->
-        <div class="flex w-3/12 flex-col justify-center">
+        <div class="flex w-full md:w-3/12 flex-col justify-center mt-6 md:mt-0">
           <div class="musician-container h-96">
             <img
               alt="Lucho Bermúdez - kolumbijski muzyk i kompozytor"
