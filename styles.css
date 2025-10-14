@@ -339,6 +339,11 @@ section {
     position: relative;
     z-index: 2;
 }
+#digital-arts {
+    background-color: var(--bg-primary);
+    position: relative;
+    z-index: 2;
+}
 
 /* Gallery Grid Layout */
 .gallery-grid {

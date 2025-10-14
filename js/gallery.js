@@ -61,7 +61,18 @@ document.addEventListener('DOMContentLoaded', function() {
         'gallery/2025-09-28_15-55.png',
         'gallery/Maria La Alta.jpg',
         'gallery/2025-09-28 at 16.49.30.jpg',
-        'gallery/Cuadro foto original.jpg',
+        'gallery/Wzory Duszy.jpg',
+        'gallery/Garcia Márquez.png',
+    ];
+
+    // List of images for the Digital Arts gallery
+    const digitalArtsImages = [
+        'gallery/digitalArts/Sklep Ogrodniczy.png',
+        'gallery/digitalArts/Produkty Eko.png',
+        'gallery/digitalArts/ikony_restauracja.png',
+        'gallery/digitalArts/Przedszkole.png',
+        'gallery/digitalArts/The Olive Branch Bistro.png',
+
     ];
 
     // Load first gallery
@@ -71,4 +82,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load second gallery
     const gallery2 = document.querySelector('#gallery2 .gallery-grid-2');
     loadGallery(gallery2, gallery2Images);
+
+    // Load Digital Arts gallery
+    const digitalArtsGallery = document.querySelector('#digital-arts .gallery-grid');
+    if (digitalArtsGallery) {
+        loadGallery(digitalArtsGallery, digitalArtsImages);
+    }
 });
