@@ -68,9 +68,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // List of images for the second gallery
     const gallery2Images = [
         'gallery/akwarele/kolekcja2025/Sunset over an Andalusian patio.png',
-        'gallery/2025-09-09_15-54.png',
+        'gallery/Taniec Rajskich Ptakow.png',
         'gallery/akwarele/kolekcja2025/Fiesta de los Patios in Córdoba.png',
-        'gallery/2025-09-28_15-55.png',
+        'gallery/Guardians of Tradition.png',
         'gallery/akwarele/kolekcja2025/Málaga at dawn.png',
         'gallery/Maria La Alta.jpg',
         'gallery/akwarele/kolekcja2025/Ancient Polish oak tree.png',
