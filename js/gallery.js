@@ -62,7 +62,26 @@ document.addEventListener('DOMContentLoaded', function() {
         'gallery/Maria La Alta.jpg',
         'gallery/2025-09-28 at 16.49.30.jpg',
         'gallery/Wzory Duszy.jpg',
-        'gallery/Garcia Márquez.png',
+        // 'gallery/Garcia Márquez.png',
+        'gallery/akwarele/kolekcja2025/Abstract composition of Polish eagle.png',
+        'gallery/akwarele/kolekcja2025/Ancient Polish oak tree.png',
+        'gallery/akwarele/kolekcja2025/Cherry blossoms in Polish orchard.png',
+        'gallery/akwarele/kolekcja2025/Ethereal Baltic sea with translucent sailing ships.png',
+        'gallery/akwarele/kolekcja2025/Fiesta de los Patios in Córdoba.png',
+        'gallery/akwarele/kolekcja2025/Misty mornings in a La Rioja vineyard.png',
+        'gallery/akwarele/kolekcja2025/Málaga at dawn.png',
+        'gallery/akwarele/kolekcja2025/Park Güell in Barcelona.png',
+        'gallery/akwarele/kolekcja2025/Polish countryside meadow.png',
+        'gallery/akwarele/kolekcja2025/Polish harvest festival.png',
+        'gallery/akwarele/kolekcja2025/Procession of translucent ancestors.png',
+        'gallery/akwarele/kolekcja2025/Sunflower field.png',
+        'gallery/akwarele/kolekcja2025/Sunlight reflecting from white houses of Ronda.png',
+        'gallery/akwarele/kolekcja2025/Sunset over an Andalusian patio.png',
+        'gallery/akwarele/kolekcja2025/Village priest reading prayers.png',
+        'gallery/akwarele/kolekcja2025/White stork building nest.png',
+        'gallery/akwarele/kolekcja2025/Woman with birds.png',
+        'gallery/akwarele/kolekcja2025/Woman with parrots.png',
+        'gallery/akwarele/kolekcja2025/Woman surrounded by birds and flowers.png'
     ];
 
     // List of images for the Digital Arts gallery
