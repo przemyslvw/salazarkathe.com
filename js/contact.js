@@ -30,6 +30,9 @@ export function initContactForm() {
 
     const t = translations[lang] || translations['en'];
 
+    // Time-based protection
+    const formLoadTime = Date.now();
+
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
@@ -39,6 +42,13 @@ export function initContactForm() {
             // If honeypot is filled, it's a bot. Return early.
             // We can pretend it was successful to confuse the bot.
             console.log('Bot detected via honeypot');
+            return;
+        }
+
+        // Time check (minimum 3 seconds)
+        const submissionTime = Date.now();
+        if (submissionTime - formLoadTime < 3000) {
+            console.log('Bot detected via time check (too fast)');
             return;
         }
 
