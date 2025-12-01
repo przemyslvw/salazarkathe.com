@@ -3,6 +3,33 @@ export function initContactForm() {
 
     if (!form) return;
 
+    // Get current language
+    const lang = document.documentElement.lang || 'en';
+
+    // Translations
+    const translations = {
+        en: {
+            sending: 'Sending...',
+            success: 'Message sent successfully!',
+            error: 'Something went wrong!',
+            networkError: 'Network error. Please try again.'
+        },
+        pl: {
+            sending: 'Wysyłanie...',
+            success: 'Wiadomość została wysłana!',
+            error: 'Coś poszło nie tak!',
+            networkError: 'Błąd sieci. Spróbuj ponownie.'
+        },
+        es: {
+            sending: 'Enviando...',
+            success: '¡Mensaje enviado con éxito!',
+            error: '¡Algo salió mal!',
+            networkError: 'Error de red. Por favor, inténtelo de nuevo.'
+        }
+    };
+
+    const t = translations[lang] || translations['en'];
+
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
@@ -10,7 +37,7 @@ export function initContactForm() {
         const originalBtnText = submitBtn.textContent;
 
         // Show loading state
-        submitBtn.textContent = 'Sending...';
+        submitBtn.textContent = t.sending;
         submitBtn.disabled = true;
 
         try {
@@ -31,17 +58,17 @@ export function initContactForm() {
 
             if (response.status === 200) {
                 // Success
-                showToast('Message sent successfully!', 'success');
+                showToast(t.success, 'success');
                 form.reset();
             } else {
                 // Error from API
                 console.error(result);
-                showToast(result.message || 'Something went wrong!', 'error');
+                showToast(result.message || t.error, 'error');
             }
         } catch (error) {
             // Network error
             console.error(error);
-            showToast('Network error. Please try again.', 'error');
+            showToast(t.networkError, 'error');
         } finally {
             // Reset button state
             submitBtn.textContent = originalBtnText;
