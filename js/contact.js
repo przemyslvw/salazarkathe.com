@@ -1,0 +1,85 @@
+export function initContactForm() {
+    const form = document.querySelector('.contact-form');
+
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('.submit-btn');
+        const originalBtnText = submitBtn.textContent;
+
+        // Show loading state
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        try {
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            });
+
+            const result = await response.json();
+
+            if (response.status === 200) {
+                // Success
+                showToast('Message sent successfully!', 'success');
+                form.reset();
+            } else {
+                // Error from API
+                console.error(result);
+                showToast(result.message || 'Something went wrong!', 'error');
+            }
+        } catch (error) {
+            // Network error
+            console.error(error);
+            showToast('Network error. Please try again.', 'error');
+        } finally {
+            // Reset button state
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
+        }
+    });
+}
+
+function showToast(message, type = 'success') {
+    // Remove existing toast if any
+    const existingToast = document.querySelector('.toast-notification');
+    if (existingToast) {
+        existingToast.remove();
+    }
+
+    // Create toast element
+    const toast = document.createElement('div');
+    toast.className = `toast-notification ${type}`;
+
+    const icon = type === 'success' ? '✅' : '❌';
+
+    toast.innerHTML = `
+        <span class="toast-icon">${icon}</span>
+        <span class="toast-message">${message}</span>
+    `;
+
+    document.body.appendChild(toast);
+
+    // Trigger animation
+    requestAnimationFrame(() => {
+        toast.classList.add('show');
+    });
+
+    // Remove after 3 seconds
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => {
+            toast.remove();
+        }, 400); // Wait for transition to finish
+    }, 3000);
+}
