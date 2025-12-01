@@ -292,6 +292,11 @@
 
             <form class="contact-form fade-up" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="c66c8f17-fac1-4ed9-9b0f-8d699006bf9b">
+                <!-- Honeypot Spam Protection -->
+                <div style="display: none;">
+                    <label for="honeypot">Leave this field empty</label>
+                    <input type="text" name="honeypot" id="honeypot" tabindex="-1" autocomplete="off">
+                </div>
                 <div class="form-group">
                     <label for="name">Nombre</label>
                     <input type="text" id="name" name="name" required>

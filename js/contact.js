@@ -33,6 +33,15 @@ export function initContactForm() {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
+        // Honeypot check
+        const honeypot = form.querySelector('input[name="honeypot"]');
+        if (honeypot && honeypot.value) {
+            // If honeypot is filled, it's a bot. Return early.
+            // We can pretend it was successful to confuse the bot.
+            console.log('Bot detected via honeypot');
+            return;
+        }
+
         const submitBtn = form.querySelector('.submit-btn');
         const originalBtnText = submitBtn.textContent;
 
